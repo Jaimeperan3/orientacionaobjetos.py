@@ -1,0 +1,20 @@
+from abc import ABC, abstractclassmethod
+
+class Animal(ABC):
+     @abstractclassmethod
+     def sonido(self):
+        pass
+
+class Perro(Animal):
+    def sonido(self):
+        return "Guau"
+
+class Gato(Animal):
+    def sonido(self):
+        return "Miau"
+    
+perro = Perro()
+gato = Gato()
+
+print(perro.sonido())
+print(gato.sonido())
